@@ -1,0 +1,86 @@
+@mixin downloadbtn($bgColor, $bdColor, $width) {
+    font-weight: bold;
+        width: $width;
+        background-color: $bgColor;
+        border-color: $bdColor;
+        border: 5px;
+        color:#fff;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    // width: 375px;
+    font-family: 'Red Hat Display';
+}
+h1{
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  h2{
+    font-size: 2.5rem;
+  }
+  p{
+      font-size: 1.125rem;
+  }
+  button{
+      height: 58px;
+      border-radius: 30px;
+  }
+.logo{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+}
+.people{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 105%;
+    }
+    .left{
+        position: relative;
+        left: -5%;
+    }
+    .right{
+        position: relative;
+        left: 3%;
+    }
+
+    @media screen and ( min-width: 800px){
+        display: flex;
+        justify-content: center;
+        
+    }
+
+}
+.topContent{
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    p{
+        text-align: center;
+    
+    }
+
+     .first{
+        @include downloadbtn(#4D96A9 , #4D96A9, 193px);
+
+        span{
+            color: #8fe3f9;
+        }
+    }
+
+    .second{
+        margin-top: 15px;
+        @include downloadbtn(#855fb1, #855fb1, 139px  );
+    }
+
+  
+    
+}
