@@ -4,6 +4,7 @@ html {
   padding: 0;
   font-size: 16px;
   font-family: "Red Hat Display";
+  background-color: #fafafa;
 }
 
 h1 {
@@ -209,5 +210,121 @@ button {
   height: 56px;
   border: 1px solid #87879D;
   border-radius: 50%;
+}
+
+.imageContainer {
+  margin: 50px auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20.4375rem;
+  height: 310px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.imageContainer img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .imageContainer {
+    margin-top: 50px;
+    height: 242px;
+    width: 1110px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.midContent {
+  text-align: center;
+  margin: 0 auto;
+  width: 337px;
+  height: 284px;
+}
+
+.midContent h2 {
+  font-size: 35px;
+}
+
+.midContent span {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #4d96a9;
+}
+
+@media screen and (min-width: 800px) {
+  .midContent {
+    margin-top: 50px;
+    width: 540px;
+    height: 300px;
+  }
+  .midContent h2 {
+    font-size: 46px;
+    width: 90%;
+  }
+  .midContent p {
+    width: 92%;
+  }
+}
+
+div .two {
+  margin-top: 100px;
+}
+
+.footer {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 428px;
+  width: 100%;
+  background-color: #4d96a9;
+  background-size: cover;
+  color: #fafafa;
+}
+
+.footer div {
+  height: 428px;
+  background-image: url("/assets/desktop/image-footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  width: 100%;
+}
+
+.footer .first {
+  font-weight: bold;
+  width: 193px;
+  background-color: #855fb1;
+  border-color: #855fb1;
+  border: 5px;
+  color: #fff;
+}
+
+.footer .first:hover {
+  cursor: pointer;
+  background-color: #b18bdd;
 }
 /*# sourceMappingURL=style.css.map */

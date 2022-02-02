@@ -8,8 +8,8 @@
   color: #fff;
 }
 //button colors
-$dwnldBtnColor: #4d96a9;
-$qstnbtnColor: #855fb1;
+$primaryColor: #4d96a9;
+$secondaryColor: #855fb1;
 
 body,
 html {
@@ -18,6 +18,7 @@ html {
   font-size: 16px;
   // width: 375px;
   font-family: "Red Hat Display";
+  background-color: #fafafa;
 }
 h1 {
   font-size: 3rem;
@@ -88,7 +89,7 @@ button {
   }
   //First Button 
   .first {
-    @include btn($dwnldBtnColor, $dwnldBtnColor, 193px);
+    @include btn($primaryColor, $primaryColor, 193px);
     &:hover {
       cursor: pointer;
       background-color: #71c0d4;
@@ -101,7 +102,7 @@ button {
 //Second Button
   .second {
     margin-top: 15px;
-    @include btn($qstnbtnColor, $qstnbtnColor, 139px);
+    @include btn($secondaryColor, $secondaryColor, 139px);
     &:hover {
       cursor: pointer;
       background-color: #b18bdd;
@@ -159,4 +160,92 @@ button {
 
 }
 
+.imageContainer{
+    margin: 50px auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 20.4375rem;
+    height: 310px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    @media screen and (min-width: 800px) {
+            margin-top: 50px;
+            height: 242px;
+            width: 1110px;
+            display: flex;;
+            justify-content: space-around;
+    }
+}
+
+.midContent{
+    text-align: center;
+    margin:0 auto;
+    width: 337px;
+    height: 284px;
+    h2{
+        font-size: 35px;
+    }
+    span{
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $primaryColor;
+    }
+
+    @media screen and (min-width: 800px) {
+        margin-top: 50px;
+        width: 540px;
+        height: 300px;
+        h2{
+            font-size: 46px;
+            width: 90%;
+        }
+        p{
+            width: 92%;
+        }
+    }
+}
+//second number box
+div .two{
+    margin-top: 100px;
+}
+
+.footer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 428px;
+    width: 100%;
+    background-color: $primaryColor;
+    
+    background-size: cover;
+    // background-repeat: no-repeat;
+    color: #fafafa;
+
+    div{
+        height:428px;
+        background-image: url('/assets/desktop/image-footer.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+        width: 100%;
+    }
+
+    .first {
+        @include btn($secondaryColor, $secondaryColor, 193px);
+        &:hover {
+          cursor: pointer;
+          background-color: #b18bdd;
+        }
+    }
+}
 
