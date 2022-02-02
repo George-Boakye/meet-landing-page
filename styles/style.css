@@ -1,8 +1,9 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: 'Red Hat Display';
+  font-family: "Red Hat Display";
 }
 
 h1 {
@@ -62,9 +63,17 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .people .left {
+    position: relative;
+    left: -2%;
+  }
+  .people .right {
+    position: relative;
+    left: 1%;
   }
 }
 
@@ -86,13 +95,31 @@ button {
   text-align: center;
 }
 
+.topContent .btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .topContent .first {
   font-weight: bold;
   width: 193px;
-  background-color: #4D96A9;
-  border-color: #4D96A9;
+  background-color: #4d96a9;
+  border-color: #4d96a9;
   border: 5px;
   color: #fff;
+}
+
+.topContent .first:hover {
+  cursor: pointer;
+  background-color: #71c0d4;
 }
 
 .topContent .first span {
@@ -107,5 +134,80 @@ button {
   border-color: #855fb1;
   border: 5px;
   color: #fff;
+}
+
+.topContent .second:hover {
+  cursor: pointer;
+  background-color: #b18bdd;
+}
+
+@media screen and (min-width: 800px) {
+  .topContent {
+    width: 510px;
+    position: absolute;
+    top: 110px;
+    left: 450px;
+  }
+  .topContent h1 {
+    width: 300px;
+  }
+  .topContent .btnBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .topContent .first,
+  .topContent .second {
+    margin: 5px;
+  }
+}
+
+.numBox {
+  margin-top: 3.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 140px;
+  width: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.numBox hr {
+  position: relative;
+  top: 8px;
+  height: 5.25rem;
+  background: #87879D;
+}
+
+.numBox span {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 56px;
+  border: 1px solid #87879D;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */

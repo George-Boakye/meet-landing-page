@@ -1,86 +1,162 @@
-@mixin downloadbtn($bgColor, $bdColor, $width) {
-    font-weight: bold;
-        width: $width;
-        background-color: $bgColor;
-        border-color: $bdColor;
-        border: 5px;
-        color:#fff;
+// button properties
+@mixin btn($bgColor, $bdColor, $width) {
+  font-weight: bold;
+  width: $width;
+  background-color: $bgColor;
+  border-color: $bdColor;
+  border: 5px;
+  color: #fff;
+}
+//button colors
+$dwnldBtnColor: #4d96a9;
+$qstnbtnColor: #855fb1;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  // width: 375px;
+  font-family: "Red Hat Display";
+}
+h1 {
+  font-size: 3rem;
+  text-align: center;
 }
 
-body,html{
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    // width: 375px;
-    font-family: 'Red Hat Display';
+h2 {
+  font-size: 2.5rem;
 }
-h1{
-    font-size: 3rem;
+p {
+  font-size: 1.125rem;
+}
+button {
+  height: 58px;
+  border-radius: 30px;
+}
+.logo {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+// hero section
+.people {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 105%;
+  }
+  //Images at the left
+  .left {
+    position: relative;
+    left: -5%;
+  }
+  //Images at the right
+  .right {
+    position: relative;
+    left: 3%;
+  }
+
+  @media screen and (min-width: 800px) {
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      position: relative;
+      left: -2%;
+    }
+    .right {
+      position: relative;
+      left: 1%;
+    }
+  }
+}
+.topContent {
+  p {
     text-align: center;
   }
-
-  h2{
-    font-size: 2.5rem;
-  }
-  p{
-      font-size: 1.125rem;
-  }
-  button{
-      height: 58px;
-      border-radius: 30px;
-  }
-.logo{
-    margin-top: 48px;
-    display: flex;
-    justify-content: center;
-}
-.people{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    img{
-        width: 105%;
-    }
-    .left{
-        position: relative;
-        left: -5%;
-    }
-    .right{
-        position: relative;
-        left: 3%;
-    }
-
-    @media screen and ( min-width: 800px){
-        display: flex;
-        justify-content: center;
-        
-    }
-
-}
-.topContent{
-    margin: 0 20px;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //Button container
+  .btnBox {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    p{
-        text-align: center;
-    
+  }
+  //First Button 
+  .first {
+    @include btn($dwnldBtnColor, $dwnldBtnColor, 193px);
+    &:hover {
+      cursor: pointer;
+      background-color: #71c0d4;
     }
 
-     .first{
-        @include downloadbtn(#4D96A9 , #4D96A9, 193px);
-
-        span{
-            color: #8fe3f9;
-        }
+    span {
+      color: #8fe3f9;
     }
-
-    .second{
-        margin-top: 15px;
-        @include downloadbtn(#855fb1, #855fb1, 139px  );
+  }
+//Second Button
+  .second {
+    margin-top: 15px;
+    @include btn($qstnbtnColor, $qstnbtnColor, 139px);
+    &:hover {
+      cursor: pointer;
+      background-color: #b18bdd;
     }
+  }
 
-  
-    
+  @media screen and (min-width: 800px) {
+    width: 510px;
+    position: absolute;
+    top: 110px;
+    left: 450px;
+
+    h1 {
+      width: 300px;
+    }
+    .btnBox {
+      display: flex;
+      flex-direction: row;
+    }
+    .first,
+    .second {
+      margin: 5px;
+    }
+  }
 }
+
+.numBox{
+    margin-top: 3.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 140px;
+    width: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+  
+    hr{ position: relative;
+        top: 8px;
+        height: 5.25rem;
+        background: #87879D;
+    }
+    span{
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 56px;
+        border: 1px solid #87879D;
+        border-radius: 50%;
+      
+    }
+
+}
+
+
