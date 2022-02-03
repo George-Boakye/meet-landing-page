@@ -193,7 +193,7 @@ button {
   position: relative;
   top: 8px;
   height: 5.25rem;
-  background: #87879D;
+  background: #87879d;
 }
 
 .numBox1 span {
@@ -209,7 +209,7 @@ button {
           align-items: center;
   width: 3rem;
   height: 56px;
-  border: 1px solid #87879D;
+  border: 1px solid #87879d;
   border-radius: 50%;
   background-color: #fafafa;
 }
@@ -309,7 +309,7 @@ button {
   position: relative;
   top: 8px;
   height: 5.25rem;
-  background: #87879D;
+  background: #87879d;
 }
 
 .numBox2 span {
@@ -325,7 +325,7 @@ button {
           align-items: center;
   width: 3rem;
   height: 56px;
-  border: 1px solid #87879D;
+  border: 1px solid #87879d;
   border-radius: 50%;
   background-color: #fafafa;
 }
@@ -362,8 +362,16 @@ button {
 }
 
 .footer div .bottomInfo {
-  position: relative;
-  top: -8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 428px;
 }
 
@@ -382,7 +390,7 @@ button {
 }
 
 .footer .first span {
-  color: #D9B8FF;
+  color: #d9b8ff;
 }
 
 @media screen and (min-width: 800px) {
@@ -414,6 +422,10 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 1110px;
     opacity: 1;
   }
