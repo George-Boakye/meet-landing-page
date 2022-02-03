@@ -5,6 +5,7 @@ html {
   font-size: 16px;
   font-family: "Red Hat Display";
   background-color: #fafafa;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -167,7 +168,7 @@ button {
   }
 }
 
-.numBox {
+.numBox1 {
   margin-top: 3.125rem;
   margin-left: auto;
   margin-right: auto;
@@ -188,14 +189,14 @@ button {
           align-items: center;
 }
 
-.numBox hr {
+.numBox1 hr {
   position: relative;
   top: 8px;
   height: 5.25rem;
   background: #87879D;
 }
 
-.numBox span {
+.numBox1 span {
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,6 +211,7 @@ button {
   height: 56px;
   border: 1px solid #87879D;
   border-radius: 50%;
+  background-color: #fafafa;
 }
 
 .imageContainer {
@@ -279,11 +281,57 @@ button {
   }
 }
 
-div .two {
-  margin-top: 100px;
+.numBox2 {
+  z-index: 1;
+  position: relative;
+  top: 25px;
+  margin-top: 3.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 140px;
+  width: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.numBox2 hr {
+  position: relative;
+  top: 8px;
+  height: 5.25rem;
+  background: #87879D;
+}
+
+.numBox2 span {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 56px;
+  border: 1px solid #87879D;
+  border-radius: 50%;
+  background-color: #fafafa;
 }
 
 .footer {
+  z-index: -1;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,17 +348,17 @@ div .two {
           justify-content: space-evenly;
   height: 428px;
   width: 100%;
-  background-color: #4d96a9;
+  z-index: -1;
+  background-image: url("/assets/mobile/image-footer.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   color: #fafafa;
 }
 
 .footer div {
   height: 428px;
-  background-image: url("/assets/desktop/image-footer.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.1;
+  background-color: #4d96a9;
+  opacity: 0.9;
   width: 100%;
 }
 
@@ -326,5 +374,9 @@ div .two {
 .footer .first:hover {
   cursor: pointer;
   background-color: #b18bdd;
+}
+
+.footer .first span {
+  color: #D9B8FF;
 }
 /*# sourceMappingURL=style.css.map */

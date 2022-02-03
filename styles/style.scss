@@ -11,6 +11,37 @@
 $primaryColor: #4d96a9;
 $secondaryColor: #855fb1;
 
+@mixin numBox {
+    margin-top: 3.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 140px;
+    width: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+  
+    hr{ position: relative;
+        top: 8px;
+        height: 5.25rem;
+        background: #87879D;
+    }
+    span{
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 56px;
+        border: 1px solid #87879D;
+        border-radius: 50%;
+        background-color: #fafafa;
+      
+    }
+}
+
 body,
 html {
   margin: 0;
@@ -19,6 +50,7 @@ html {
   // width: 375px;
   font-family: "Red Hat Display";
   background-color: #fafafa;
+  overflow-x: hidden;
 }
 h1 {
   font-size: 3rem;
@@ -129,34 +161,8 @@ button {
   }
 }
 
-.numBox{
-    margin-top: 3.125rem;
-    margin-left: auto;
-    margin-right: auto;
-    height: 140px;
-    width: 3.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    
-  
-    hr{ position: relative;
-        top: 8px;
-        height: 5.25rem;
-        background: #87879D;
-    }
-    span{
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 56px;
-        border: 1px solid #87879D;
-        border-radius: 50%;
-      
-    }
+.numBox1{
+   @include numBox();
 
 }
 
@@ -213,11 +219,16 @@ button {
     }
 }
 //second number box
-div .two{
-    margin-top: 100px;
+.numBox2{
+    z-index: 1;
+    position: relative;
+    top: 25px;
+
+   @include numBox();
 }
 
 .footer{
+    z-index: -1;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -225,18 +236,17 @@ div .two{
     justify-content: space-evenly;
     height: 428px;
     width: 100%;
-    background-color: $primaryColor;
-    
+    z-index: -1;
+    background-image: url('/assets/mobile/image-footer.jpg');
     background-size: cover;
-    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
+
     color: #fafafa;
 
     div{
         height:428px;
-        background-image: url('/assets/desktop/image-footer.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        opacity: 0.1;
+        background-color: $primaryColor;
+        opacity: 0.9;
         width: 100%;
     }
 
@@ -245,6 +255,10 @@ div .two{
         &:hover {
           cursor: pointer;
           background-color: #b18bdd;
+        }
+
+        span{
+            color: #D9B8FF;
         }
     }
 }
