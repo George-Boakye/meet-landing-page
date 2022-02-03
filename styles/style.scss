@@ -236,7 +236,6 @@ button {
     justify-content: space-evenly;
     height: 428px;
     width: 100%;
-    z-index: -1;
     background-image: url('/assets/mobile/image-footer.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -248,7 +247,14 @@ button {
         background-color: $primaryColor;
         opacity: 0.9;
         width: 100%;
+
+        .bottomInfo{
+            position: relative;
+            top:-8%;
+            height: 428px;
+        }
     }
+
 
     .first {
         @include btn($secondaryColor, $secondaryColor, 193px);
@@ -259,6 +265,29 @@ button {
 
         span{
             color: #D9B8FF;
+        }
+    }
+
+    @media screen and(min-width: 800px) {
+        background-image: url('/assets/desktop/image-footer.jpg');
+        background-size: cover;
+        height: 308px;
+
+        div{
+            height: 308px;
+            display: flex;
+            align-items: center;
+            justify-content:center ;
+
+            .bottomInfo{
+                height: 88px;
+                text-align: left;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 1110px;
+                opacity: 1;
+            }
         }
     }
 }
