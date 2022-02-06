@@ -10,7 +10,7 @@
 //button colors
 $primaryColor: #4d96a9;
 $secondaryColor: #855fb1;
-
+//number position
 @mixin numBox {
   margin-top: 3.125rem;
   margin-left: auto;
@@ -139,6 +139,19 @@ button {
       background-color: #b18bdd;
     }
   }
+  @media screen and (min-width:401px) {
+    margin: 0 auto;
+    width: 28.5625rem;
+    height: 350px;
+
+    .btnBox{
+      width: 360px;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-evenly;
+    }
+  }
 
   @media screen and (min-width: 800px) {
     width: 510px;
@@ -178,8 +191,12 @@ button {
     width: 100%;
     border-radius: 10px;
   }
-
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 401px) {
+    width: 43.0625rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 800px ){
     margin-top: 50px;
     height: 242px;
     width: 1110px;
@@ -193,13 +210,21 @@ button {
   margin: 0 auto;
   width: 337px;
   height: 284px;
-  h2 {
-    font-size: 35px;
-  }
+
   span {
     text-transform: uppercase;
     font-weight: bold;
     color: $primaryColor;
+    letter-spacing: 2px;
+  }
+  @media screen and (min-width: 401px) {
+    width: 35.8125rem;
+    height: 240px;
+
+    h2{
+      font-size: 50px;
+    }
+
   }
 
   @media screen and (min-width: 800px) {
@@ -207,7 +232,7 @@ button {
     width: 540px;
     height: 300px;
     h2 {
-      font-size: 46px;
+      font-size: 2.875rem;
       width: 90%;
     }
     p {
@@ -265,7 +290,22 @@ button {
       color: #d9b8ff;
     }
   }
+  @media  screen and (min-width: 401px) {
+    div{
+      display: flex;
+      justify-content: center;
+    }
+    h2{
+      width: 450px;
+    }
 
+    .bottomInfo{
+      width: 573px;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   @media screen and(min-width: 800px) {
     background-image: url("/assets/desktop/image-footer.jpg");
     background-size: cover;

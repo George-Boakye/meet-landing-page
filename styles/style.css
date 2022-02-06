@@ -143,6 +143,30 @@ button {
   background-color: #b18bdd;
 }
 
+@media screen and (min-width: 401px) {
+  .topContent {
+    margin: 0 auto;
+    width: 28.5625rem;
+    height: 350px;
+  }
+  .topContent .btnBox {
+    width: 360px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .topContent {
     width: 510px;
@@ -236,6 +260,17 @@ button {
   border-radius: 10px;
 }
 
+@media screen and (min-width: 401px) {
+  .imageContainer {
+    width: 43.0625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .imageContainer {
     margin-top: 50px;
@@ -256,14 +291,21 @@ button {
   height: 284px;
 }
 
-.midContent h2 {
-  font-size: 35px;
-}
-
 .midContent span {
   text-transform: uppercase;
   font-weight: bold;
   color: #4d96a9;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 401px) {
+  .midContent {
+    width: 35.8125rem;
+    height: 240px;
+  }
+  .midContent h2 {
+    font-size: 50px;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -273,7 +315,7 @@ button {
     height: 300px;
   }
   .midContent h2 {
-    font-size: 46px;
+    font-size: 2.875rem;
     width: 90%;
   }
   .midContent p {
@@ -391,6 +433,32 @@ button {
 
 .footer .first span {
   color: #d9b8ff;
+}
+
+@media screen and (min-width: 401px) {
+  .footer div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer h2 {
+    width: 450px;
+  }
+  .footer .bottomInfo {
+    width: 573px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (min-width: 800px) {
