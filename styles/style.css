@@ -143,7 +143,7 @@ button {
   background-color: #b18bdd;
 }
 
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 500px) {
   .topContent {
     margin: 0 auto;
     width: 28.5625rem;
@@ -260,7 +260,7 @@ button {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 500px) {
   .imageContainer {
     width: 43.0625rem;
     display: -webkit-box;
@@ -298,7 +298,7 @@ button {
   letter-spacing: 2px;
 }
 
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 500px) {
   .midContent {
     width: 35.8125rem;
     height: 240px;
@@ -435,7 +435,7 @@ button {
   color: #d9b8ff;
 }
 
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 500px) {
   .footer div {
     display: -webkit-box;
     display: -ms-flexbox;
